@@ -1,10 +1,66 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html> 
 <html>
 <head>
-<title>Cordova</title>
-<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
-</head>
-<body>
-<h1>Hello World</h1>
+<meta charset="utf-8">
+<title>jQuery Mobile Web App</title>
+<link href="jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Guitar Practice Aid</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">Metronome</a></li>
+            <li><a href="#page3">Tune by Ear</a></li>
+			<li><a href="#page4">Practice</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h1></h1>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Metronome</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer">
+		<h4><a href="#page">Back</a></h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Tune by Ear</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer">
+		<h4><a href="#page">Back</a></h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Practice</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer">
+		<h4><a href="#page">Back</a></h4>
+	</div>
+</div>
+
 </body>
 </html>
