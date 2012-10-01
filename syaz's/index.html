@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.5; user-scalable=no;">
+		<title>jPlayer - Circle Player</title>
+
+		<link rel="stylesheet" href="css/not.the.skin.css">
+		<link rel="stylesheet" href="circle.skin/circle.player.css">
+		
+		<script type="text/javascript" src="js/cordova-2.0.0.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.transform.js"></script>
+		<script type="text/javascript" src="js/jquery.grab.js"></script>
+		<script type="text/javascript" src="js/jquery.jplayer.js"></script>
+		<script type="text/javascript" src="js/mod.csstransforms.min.js"></script>
+		<script type="text/javascript" src="js/circle.player.js"></script>
+		<!--<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>-->
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+
+			/*
+			 * Instance CirclePlayer inside jQuery doc ready
+			 *
+			 * CirclePlayer(jPlayerSelector, media, options)
+			 *   jPlayerSelector: String - The css selector of the jPlayer div.
+			 *   media: Object - The media object used in jPlayer("setMedia",media).
+			 *   options: Object - The jPlayer options.
+			 *
+			 * Multiple instances must set the cssSelectorAncestor in the jPlayer options. Defaults to "#cp_container_1" in CirclePlayer.
+			 */
+
+			var myCirclePlayer = new CirclePlayer("#jquery_jplayer_1",
+			{
+				m4a: src="music/Standard-E.m4a",
+				oga: src="music/Standard-E.ogg"
+			}, {
+				cssSelectorAncestor: "#cp_container_1"
+			});
+
+			// This code creates a 2nd instance. Delete if not required.
+
+			var myOtherOne = new CirclePlayer("#jquery_jplayer_2",
+			{
+				m4a:src="music/Standard-A.m4a",
+				oga:src="music/Standard-A.ogg"
+			}, {
+				cssSelectorAncestor: "#cp_container_2"
+			});
+			
+			var myCirclePlayer = new CirclePlayer("#jquery_jplayer_3",
+			{
+				m4a: src="music/Standard-D.m4a",
+				oga: src="music/Standard-D.ogg"
+			}, {
+				cssSelectorAncestor: "#cp_container_3"
+			});
+			
+			var myCirclePlayer = new CirclePlayer("#jquery_jplayer_4",
+			{
+				m4a: src="music/Standard-G.m4a",
+				oga: src="music/Standard-G.ogg"
+			}, {
+				cssSelectorAncestor: "#cp_container_4"
+			});
+			
+			var myCirclePlayer = new CirclePlayer("#jquery_jplayer_5",
+			{
+				m4a: src="music/Standard-B.m4a",
+				oga: src="music/Standard-B.ogg"
+			}, {
+				cssSelectorAncestor: "#cp_container_5"
+			});
+			
+			var myCirclePlayer = new CirclePlayer("#jquery_jplayer_6",
+			{
+				m4a: src="music/Standard-highE.m4a",
+				oga: src="music/Standard-highE.ogg"
+			}, {
+				cssSelectorAncestor: "#cp_container_6"
+			});
+
+
+
+
+
+		});
+		</script>
+	</head>
+	<body>
+
+		<!-- The jPlayer div must not be hidden. Keep it at the root of the body element to avoid any such problems. -->
+		<div id="jquery_jplayer_1" class="cp-jplayer"></div>
+
+		<!-- This is the 2nd instance's jPlayer div -->
+		<div id="jquery_jplayer_2" class="cp-jplayer"></div>
+		
+		<!-- This is the 2nd instance's jPlayer div -->
+		<div id="jquery_jplayer_3" class="cp-jplayer"></div>
+		
+		<!-- This is the 2nd instance's jPlayer div -->
+		<div id="jquery_jplayer_4" class="cp-jplayer"></div>
+		
+		<!-- This is the 2nd instance's jPlayer div -->
+		<div id="jquery_jplayer_5" class="cp-jplayer"></div>
+		
+		<!-- This is the 2nd instance's jPlayer div -->
+		<div id="jquery_jplayer_6" class="cp-jplayer"></div>
+		
+		<h1> This is a standard tuner </h1>
+		
+		<div class="prototype-wrapper"> <!-- A wrapper to emulate use in a webpage and center align -->
+
+
+			<!-- The container for the interface can go where you want to display it. Show and hide it as you need. -->
+			<h2> "E" </h2>
+			<div id="cp_container_1" class="cp-container">
+				<div class="cp-buffer-holder"> <!-- .cp-gt50 only needed when buffer is > than 50% -->
+					<div class="cp-buffer-1"></div>
+					<div class="cp-buffer-2"></div>
+				</div>
+				<div class="cp-progress-holder"> <!-- .cp-gt50 only needed when progress is > than 50% -->
+					<div class="cp-progress-1"></div>
+					<div class="cp-progress-2"></div>
+				</div>
+				<div class="cp-circle-control"></div>
+				<ul class="cp-controls">
+					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+					</ul>
+			</div>
+
+			<!-- This is the 2nd instance HTML -->
+			<h2> "A" </h2>
+			<div id="cp_container_2" class="cp-container">
+				<div class="cp-buffer-holder">
+					<div class="cp-buffer-1"></div>
+					<div class="cp-buffer-2"></div>
+				</div>
+				<div class="cp-progress-holder">
+					<div class="cp-progress-1"></div>
+					<div class="cp-progress-2"></div>
+				</div>
+				<div class="cp-circle-control"></div>
+				<ul class="cp-controls">
+					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+				</ul>
+			</div>
+			
+			<!-- This is the 3rd instance HTML -->
+			<h2> "D" </h2>
+			<div id="cp_container_3" class="cp-container">
+				<div class="cp-buffer-holder">
+					<div class="cp-buffer-1"></div>
+					<div class="cp-buffer-2"></div>
+				</div>
+				<div class="cp-progress-holder">
+					<div class="cp-progress-1"></div>
+					<div class="cp-progress-2"></div>
+				</div>
+				<div class="cp-circle-control"></div>
+				<ul class="cp-controls">
+					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+				</ul>
+			</div>
+			
+			<!-- This is the 4th instance HTML -->
+			<h2> "G" </h2>
+			<div id="cp_container_4" class="cp-container">
+				<div class="cp-buffer-holder">
+					<div class="cp-buffer-1"></div>
+					<div class="cp-buffer-2"></div>
+				</div>
+				<div class="cp-progress-holder">
+					<div class="cp-progress-1"></div>
+					<div class="cp-progress-2"></div>
+				</div>
+				<div class="cp-circle-control"></div>
+				<ul class="cp-controls">
+					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+				</ul>
+			</div>
+			
+			<!-- This is the 5th instance HTML -->
+			<h2> "B" </h2>
+			<div id="cp_container_5" class="cp-container">
+				<div class="cp-buffer-holder">
+					<div class="cp-buffer-1"></div>
+					<div class="cp-buffer-2"></div>
+				</div>
+				<div class="cp-progress-holder">
+					<div class="cp-progress-1"></div>
+					<div class="cp-progress-2"></div>
+				</div>
+				<div class="cp-circle-control"></div>
+				<ul class="cp-controls">
+					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+				</ul>
+			</div>
+			
+			<!-- This is the 6th instance HTML -->
+			<h2> "high E" </h2>
+			<div id="cp_container_6" class="cp-container">
+				<div class="cp-buffer-holder">
+					<div class="cp-buffer-1"></div>
+					<div class="cp-buffer-2"></div>
+				</div>
+				<div class="cp-progress-holder">
+					<div class="cp-progress-1"></div>
+					<div class="cp-progress-2"></div>
+				</div>
+				<div class="cp-circle-control"></div>
+				<ul class="cp-controls">
+					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
