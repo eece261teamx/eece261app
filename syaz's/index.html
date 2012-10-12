@@ -1,42 +1,27 @@
 <!DOCTYPE html> 
 <html> 
-	<head> 
-	<title>Guitar Tuner</title> 
+<head> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-	<script src="js/jquery-1.7.1.min.js"></script>
-	<script src="js/jquery.mobile-1.1.1.min.js"></script>
+	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
 </head> 
+
 <body> 
 
 <div data-role="page">
 
 	<div data-role="header">
-		<h1>Standard</h1>
+		<h1>Tuner</h1>
 	</div><!-- /header -->
-
-	<div data-role="content">	
-		<!--create a group of buttons-->
-		<div data-role="controlgroup">
-			<audio id="E" src="music/Standard-E.m4a"></audio>
-			<audio id="A" src="music/Standard-A.m4a"></audio>
-			<audio id="D" src="music/Standard-D.m4a"></audio>
-			<audio id="G" src="music/Standard-G.m4a"></audio>
-			<audio id="B" src="music/Standard-B.m4a"></audio>
-			<audio id="highE" src="music/Standard-highE.m4a"></audio>
-			
-			<a data-role="button" onclick="document.getElementById('E').play()">E</a>
-			<a data-role="button" onclick="document.getElementById('A').play()">A</a>
-			<a data-role="button" onclick="document.getElementById('D').play()">D</a>
-			<a data-role="button" onclick="document.getElementById('G').play()">G</a>
-			<a data-role="button" onclick="document.getElementById('B').play()">B</a>
-			<a data-role="button" onclick="document.getElementById('highE').play()">high E</a>
-			
-			
-		</div>	
+		
+	<div data-role="content">
+		<h3>Select the instrument to be tuned: </h3>	
+		<a href="tuners.html#guitar" data-role="button" data-ajax="false">Guitar</a>
+		<a href="tuners.html#ukulele" data-role="button" data-ajax="false">Ukulele</a>
+		<a href="tuners.html#bass" data-role="button" data-ajax="false">Bass</a>
 	</div><!-- /content -->
 
-</div><!-- /page -->
-
+</div>
 </body>
 </html>
