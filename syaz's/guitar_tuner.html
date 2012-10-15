@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
 	<script src="js/jquery-1.8.2.min.js"></script>
 	<script src="js/jquery.mobile-1.2.0.min.js"></script>
-	<script src="audio.js"></script>
+	
 </head> 
 
 <body> 
@@ -16,14 +16,6 @@
 		<a href="tuners.html#guitar" data-role="button" data-icon="back" data-ajax="false">Back</a>
 		<h1 id="t1" style="display:none">Guitar Tuner - Standard</h1>
 		<h1 id="t2" style="display:none">Guitar Tuner - Drop D</h1>
-		<script>
-			if(location.hash.slice(1)=="drop_d"){
-				document.getElementById('t2').style.display="";
-			}
-			else{
-				document.getElementById('t1').style.display="";
-			}
-		</script>
 	</div><!-- /header -->
 
 	<div data-role="content">	
@@ -38,19 +30,11 @@
 			<div class="ui-block-a">
 				<a data-role="button" style="display:none" id="Standard_E">E</a>
 				<a data-role="button" style="display:none" id="Drop_D_D">D</a>
-			</div>
-			<script>
-				if(location.hash.slice(1)=="drop_d"){
-					document.getElementById('Drop_D_D').style.display="";
-				}
-				else{
-					document.getElementById('Standard_E').style.display="";
-				}
-			</script>
+			</div>	
+				
 			<div class="ui-block-b"><a data-role="button" id="Standard_A">A</a></div>
 			<div class="ui-block-c"><a data-role="button" id="Standard_D">D</a></div>
-		</div>
-			
+		</div>	
 		<div class="ui-grid-b">
 			<div class="ui-block-a"><a data-role="button" id="Standard_G">G</a></div>
 			<div class="ui-block-b"><a data-role="button" id="Standard_B">B</a></div>
@@ -59,6 +43,17 @@
 
 		<button id="stop" style="color:white; background-color:red";>Stop</button>
 		
+		<script>
+			if(location.hash.slice(1)=="drop_d"){
+				document.getElementById('Drop_D_D').style.display="";
+				document.getElementById('t2').style.display="";
+			}
+			else{
+				document.getElementById('Standard_E').style.display="";
+				document.getElementById('t1').style.display="";
+			}
+		</script>
+		<script src="audio.js"></script>
 		<script src="loop.js"></script>
 	</div><!-- /content -->
 </div>
