@@ -1,13 +1,11 @@
 
 var audios = new Array();
 i=0;
-AddNote("Standard-E");
-AddNote("Standard-A");
-AddNote("Standard-D");
-AddNote("Standard-G");
-AddNote("Standard-B");
-AddNote("Standard-highE");
-AddNote("DropD-D");
+AddNote("Ukulele_Standard_G");
+AddNote("Ukulele_Standard_C");
+AddNote("Ukulele_Standard_E");
+AddNote("Ukulele_Standard_A");
+
 
 function AddNote(name) {
     var audioElement = document.createElement('audio');
@@ -24,32 +22,20 @@ function AddNote(name) {
 }
 
 
-$("#Standard_E").click(function(){
+$("#Ukulele_Standard_G").click(function(){
 	audios[0].play();
 });
 
-$("#Standard_A").click(function(){
+$("#Ukulele_Standard_C").click(function(){
 	audios[1].play();
 });
 
-$("#Standard_D").click(function(){
+$("#Ukulele_Standard_E").click(function(){
 	audios[2].play();
 });
 
-$("#Standard_G").click(function(){
+$("#Ukulele_Standard_A").click(function(){
 	audios[3].play();
-});
-
-$("#Standard_B").click(function(){
-	audios[4].play();
-});
-
-$("#Standard_highE").click(function(){
-	audios[5].play();
-});
-
-$("#Drop_D_D").click(function(){
-	audios[6].play();
 });
 
 $("#stop").click(function(){

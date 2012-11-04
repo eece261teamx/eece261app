@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<Title>Ukulele Tuner</Title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+	
+</head> 
+
+<body> 
+<div data-role="page">
+	
+	<div data-role="header">
+		<a href="index.html" data-role="button" data-icon="back" data-ajax="false">Back</a>
+		<h1>Ukulele Tuner - Standard</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		
+		<label>Loop:</label>
+		<select name="flip-mini" id="toggle" data-role="slider" data-inline="false" data-mini="true">
+			<option value="off">Off</option>
+			<option value="on">On</option>
+		</select>
+			
+		<div class="ui-grid-a">
+			<div class="ui-block-a"><a data-role="button" id="Ukulele_Standard_G">G</a></div>	
+			<div class="ui-block-b"><a data-role="button" id="Ukulele_Standard_C">C</a></div>	
+		</div>	
+		<div class="ui-grid-a">
+			<div class="ui-block-a"><a data-role="button" id="Ukulele_Standard_E">E</a></div>
+			<div class="ui-block-b"><a data-role="button" id="Ukulele_Standard_A">A</a></div>
+		</div>
+
+		<button id="stop" style="color:white; background-color:red";>Stop</button>
+		<script src="ukulele_audio.js"></script>
+	</div><!-- /content -->
+</div>
+</body>
+</html>

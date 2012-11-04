@@ -1,0 +1,79 @@
+<!doctype html>  
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>jquery.stopwatch.js demo</title>
+    <meta name="description" content="jquery.stopwatch.js demo">
+    <meta name="author" content="Rob Cowie">
+    <script src="https://raw.github.com/nene/jintervals/master/jintervals.js"></script>
+    <script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+    
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .label {
+            float: left;
+            width: 25em;
+            text-align: right;
+            padding-right: 10px;
+        }
+        .demo {
+            margin-bottom: 10px;
+            width: 150px;
+            border-bottom-left-radius: 4px 4px;
+            border-bottom-right-radius: 4px 4px;
+            border-top-left-radius: 4px 4px;
+            border-top-right-radius: 4px 4px;
+            border: 2px solid #EEE;
+            float: left;
+            padding: 0px 8px;
+        }
+        #demo2, #demo3 {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Stopwatch</h1>
+	</div><!-- /header -->
+		
+	<div data-role="content">
+		<div id="main">
+           
+            <div class="example">
+                <div class="label">Click to toggle (start/stop)</div>
+                <div id="demo2" class="demo">00:00:00</div>
+            </div>
+            <div class="example">
+                <div class="label">Click to reset</div>
+                <div id="demo3" class="demo">00:00:00</div>
+            </div>
+        </div>
+        
+        <footer></footer>
+	</div><!-- /content -->
+
+</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="jquery.stopwatch.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#demo2').stopwatch().click(function(){ 
+                $(this).stopwatch('toggle');
+            });
+            $('#demo3').stopwatch().click(function(){ 
+                $(this).stopwatch('reset');
+            }).stopwatch('start');
+        });
+	</script>
+
+</body>
+</html>
