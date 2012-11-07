@@ -1,0 +1,72 @@
+<!-- Copyright (c) 2012 Mobile Developer Solutions -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Metronome</title>
+
+ 	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.2.0.css" />
+    <script src="jquery.mobile/jquery-1.8.2.js"></script>
+	<script src="jquery.mobile/jquery.mobile-1.2.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+	
+
+	
+	
+  
+	<!-- CDN Respositories: For production, replace lines above with these uncommented minified versions -->
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />-->
+	<!-- <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>-->
+	<!-- <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>-->
+	</head>
+  
+  <body onload="init();">
+	
+	
+	<script type="text/javascript" charset="utf-8" src="apis/metronome.js"></script>
+		
+	
+	
+	<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Metronome</h1>
+	</div><!-- /header -->
+	<div data-role="content">	
+
+ 	Speed (bpm):</br><input type="range" name="slider-1" id="slider-1" value="80" min="80" max="200" data-highlight="true" step="5" />
+	
+	<script>
+	function playmetronome()
+	{
+	stopAudio();
+	var w = document.getElementById("slider-1").value;
+	var x = w.toString();
+	var y1 = "/android_asset/www/sounds/metronome/0";
+	var y2 = "/android_asset/www/sounds/metronome/";
+	var z = "_bpm.mp3";
+	if (w < 100)
+	{
+		var total = y1+x+z;
+	}
+	if (w >= 100)
+	{
+	    var total = y2+x+z;
+	}
+	playAudio(total);
+	}
+	</script>
+	
+	
+	<button onclick = "playmetronome();">Play</a>
+	<button onclick="stopAudio()">Stop</button>
+
+		
+	<a href="index.html#home" data-role="button" data-icon="arrow-l" data-theme="a" data-ajax="false">Back</a>
+ 
+	</div><!-- /content -->
+	</div><!-- /page -->
+
+
+	
+  </body>
+</html>
