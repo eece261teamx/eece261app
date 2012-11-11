@@ -56,7 +56,7 @@ $("#stop").click(function(){
     stopAllActivity()
 });
 
-$("#toggle").change(function() {
+$('select').slider.change(function() {
 	loop()
 });
 
@@ -72,6 +72,7 @@ function loop()
 	if($("#toggle").val().toString()=="on")
 	{	
 		enableLoop() 
+		alert("toggle switch is on");
 	}
 	else
 	{
