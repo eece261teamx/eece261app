@@ -1,0 +1,58 @@
+<!-- Copyright (c) 2012 Mobile Developer Solutions -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Chronometer</title>
+
+ 	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.2.0.css" />
+    <script src="jquery.mobile/jquery-1.8.2.js"></script>
+	<script src="jquery.mobile/jquery.mobile-1.2.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+	
+
+	
+	
+  
+	<!-- CDN Respositories: For production, replace lines above with these uncommented minified versions -->
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />-->
+	<!-- <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>-->
+	<!-- <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>-->
+	</head>
+  
+  <body onload="readLocalStorage2()">
+	
+	
+	<script type="text/javascript" charset="utf-8" src="apis/stopwatch.js"></script>
+	
+	
+	
+	<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Chronometer</h1>
+	</div><!-- /header -->
+	<div data-role="content">	
+    <div align="center" style="font-size:21px; font-weight:800;">Hour/Min/Sec 
+ 	<div id="showtm">0 : 0 : 0</div>
+ 	</div>
+	
+	
+	<button id="start" onclick = "startChr();this.disabled=true">Start</a>
+	<button onclick="stopChr()">Pause</button>
+	<button id="reset" onclick="resetChr();this.disabled=true">Reset</button>
+	<div align="center" style="font-size:21px; font-weight:800;">Hour format:  
+	<div id="hourstoday">0</div>
+	</div>
+	<div id="record">
+	<button id="recordbutton" onclick = "push();this.disabled=true">Record to Progress Tracker</button>
+	</div>
+	<br />	
+	<a href="index.html#home" data-role="button" data-icon="arrow-l" data-theme="a" data-ajax="false">Back</a>
+ 
+	</div><!-- /content -->
+	</div><!-- /page -->
+
+
+	
+  </body>
+</html>
