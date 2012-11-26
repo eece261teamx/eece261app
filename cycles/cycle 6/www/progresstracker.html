@@ -1,0 +1,52 @@
+<!-- Copyright (c) 2012 Mobile Developer Solutions -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Progress Tracker</title>
+
+ 	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.2.0.css" />
+    <script src="jquery.mobile/jquery-1.8.2.js"></script>
+	<script src="jquery.mobile/jquery.mobile-1.2.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+
+
+	
+	
+  
+	<!-- CDN Respositories: For production, replace lines above with these uncommented minified versions -->
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />-->
+	<!-- <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>-->
+	<!-- <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>-->
+	</head>
+  
+  <body onload="readLocalStorage()">
+	
+	<script type="text/javascript" charset="utf-8" src="apis/progresstracker.js"></script>
+	
+		
+	
+	
+	<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Progress Tracker</h1>
+	</div><!-- /header -->
+	<div data-role="content">
+	How many hours do you want to add to your guitar practice milestone?	
+    <input type="number" id="hourstoday" data-role="button">
+    <button onclick = "writeLocalStorage();">Record</a>
+	<button onclick="removeItemLocalStorage()">Reset</button>
+	
+	<div class="ui-grid-a">
+	<span id="local-storage-result"></span><br/>
+	</div>
+	
+	<a href="index.html#home" data-role="button" data-icon="arrow-l" data-theme="a" data-ajax="false">Back</a>
+ 
+	</div><!-- /content -->
+	</div><!-- /page -->
+
+	
+	
+  </body>
+</html>
