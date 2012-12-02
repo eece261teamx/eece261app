@@ -1,8 +1,9 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-	<Title>Ukulele Tuner</Title>
 	<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Ukulele Tuner</title>
+
  	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.2.0.css" />
     <script src="jquery.mobile/jquery-1.8.2.js"></script>
 	<script src="jquery.mobile/jquery.mobile-1.2.0.js"></script>
@@ -15,28 +16,22 @@
 	
 	<div data-role="header">
 		<a href="tuner.html" data-role="button" data-icon="back" data-ajax="false">Back</a>
-		<h1>Ukulele Tuner - Standard</h1>
+		<h1>Standard</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		
-		<label>Loop:</label>
-		<select name="flip-mini" id="toggle" data-role="slider" data-inline="false" data-mini="true">
-			<option value="off">Off</option>
-			<option value="on">On</option>
-		</select>
 			
 		<div class="ui-grid-a">
-			<div class="ui-block-a"><a data-role="button" id="Ukulele_Standard_G">G</a></div>	
-			<div class="ui-block-b"><a data-role="button" id="Ukulele_Standard_C">C</a></div>	
+			<div class="ui-block-a"><a data-role="button" id="Ukulele_Standard_G" onclick="playAudio(id)">G</a></div>	
+			<div class="ui-block-b"><a data-role="button" id="Ukulele_Standard_C" onclick="playAudio(id)">C</a></div>	
 		</div>	
 		<div class="ui-grid-a">
-			<div class="ui-block-a"><a data-role="button" id="Ukulele_Standard_E">E</a></div>
-			<div class="ui-block-b"><a data-role="button" id="Ukulele_Standard_A">A</a></div>
+			<div class="ui-block-a"><a data-role="button" id="Ukulele_Standard_E" onclick="playAudio(id)">E</a></div>
+			<div class="ui-block-b"><a data-role="button" id="Ukulele_Standard_A" onclick="playAudio(id)">A</a></div>
 		</div>
 
-		<button id="stop" style="color:white; background-color:red";>Stop</button>
-		<script src="ukulele_audio.js"></script>
+		<button id="stop" style="color:white; background-color:red"; onclick="document.location.reload(true)">Stop</button>
+		<script src="media.js"></script>
 	</div><!-- /content -->
 </div>
 </body>
