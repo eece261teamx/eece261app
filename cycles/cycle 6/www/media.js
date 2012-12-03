@@ -43,11 +43,18 @@ function onError(error) {
     setAudioPosition("0");
 }
 function playAudio(id) {
-    src = "/android_asset/www/sounds/tuner/"+id+".mp3"            
-    // Create Media object from src
-    my_media = new Media(src, onSuccess, onError);    
-    my_media.play();
-    
+    if (my_media === null) {   
+    	src = "/android_asset/www/sounds/"+id+".mp3"            
+        // Create Media object from src
+        my_media = new Media(src, onSuccess, onError);       
+        my_media.play();
+    } else {
+        if (is_paused) {
+            // to resume where paused in song: call .play()
+            is_paused = false;
+            my_media.play();
+        }
+    }
     // Update my_media position every second
     if (mediaTimer === null) {
         mediaTimer = setInterval(function() {
@@ -95,4 +102,43 @@ function stopAudio() {
     }
     is_paused = false;
     dur = 0;
+}
+
+
+// api-media   Live Audio Recording / Playback
+var mediaRec = 0;
+function playbackRecord() {
+    if (mediaRec) {
+    	console.log("Playing Audio");
+        my_media = new Media(mediaRec.src, onSuccess, onError);       
+        my_media.play();
+    }
+    
+}
+function recordSuccess() {
+    console.log("Record Success");
+    document.getElementById('record-status').innerHTML = "<b>Recorded</b>";
+}
+function recordError(error) {
+    // After 1st time always shows error, but may be bug instead
+    console.log('Record Error: code: ' + error.code);
+}
+function startRecord() {
+    var src = "myrecording.wav";
+    
+    // disable playback while recording
+    if (mediaRec) {
+        mediaRec.release();  // help prevent errors
+    }
+    mediaRec = new Media(src, recordSuccess, recordError);
+    mediaRec.startRecord();
+    console.log("Recording..");
+    document.getElementById('record-status').innerHTML = '<span style="color:#f22;"><b>Recording</b></span>';
+}
+
+function stopRecord() {
+    if (mediaRec) {
+        mediaRec.stopRecord();
+        console.log("Stop Recording");
+    }
 }
