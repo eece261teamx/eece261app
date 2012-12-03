@@ -43,18 +43,10 @@ function onError(error) {
     setAudioPosition("0");
 }
 function playAudio(id) {
-    if (my_media === null) {   
-    	src = "/android_asset/www/sounds/"+id+".mp3"            
-        // Create Media object from src
-        my_media = new Media(src, onSuccess, onError);       
-        my_media.play();
-    } else {
-        if (is_paused) {
-            // to resume where paused in song: call .play()
-            is_paused = false;
-            my_media.play();
-        }
-    }
+ 	src = "/android_asset/www/sounds/tuner/"+id+".mp3";  	
+    // Create Media object from src 	
+    my_media = new Media(src, onSuccess, onError);    
+    my_media.play();
     // Update my_media position every second
     if (mediaTimer === null) {
         mediaTimer = setInterval(function() {
